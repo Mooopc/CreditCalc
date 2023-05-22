@@ -1,20 +1,20 @@
 public class Main {
     public static void main(String[] args) {
         CreditPaymentService service = new CreditPaymentService();
-        int FirstCreditAmount = 1_000_000;      //Сумма первого кредита
-        int SecondCreditAmount = 19_520_000;    //Сумма второго кредита
-        int ThirdCreditAmount = 550_000;        //Сумма третьего кредита
+        int firstCreditAmount = 1_000_000;      //Сумма первого кредита
+        int secondCreditAmount = 19_520_000;    //Сумма второго кредита
+        int thirdCreditAmount = 550_000;        //Сумма третьего кредита
         double percent = 9.99;  //Процентная ставка
-        int FirstMonths = 12;   //Количество месяцев для первого кредита
-        int SecondMonths = 120;  //Количество месяцев для второго кредита
-        int ThirdMonths = 12;   //Количество месяцев для третьего кредита
-        double FirstAnnuityPayment = service.calculate(FirstCreditAmount, percent, FirstMonths); //Аннуитетный платёж
-        System.out.println("Сумма ежемесячного платежа: " + (int) FirstAnnuityPayment + " рублей");
+        int firstMonths = 12;   //Количество месяцев для первого кредита
+        int secondMonths = 120;  //Количество месяцев для второго кредита
+        int thirdMonths = 12;   //Количество месяцев для третьего кредита
+        double firstAnnuityPayment = service.calculate(firstCreditAmount, percent, firstMonths); //Аннуитетный платёж
+        System.out.println("Сумма ежемесячного платежа: " + (int) firstAnnuityPayment + " рублей");
 
-        double SecondAnnuityPayment = service.calculate(SecondCreditAmount, percent, SecondMonths); //Аннуитетный платёж
-        System.out.println("Сумма ежемесячного платежа: " + (int) SecondAnnuityPayment + " рублей");
+        double secondAnnuityPayment = service.calculate(secondCreditAmount, percent, secondMonths); //Аннуитетный платёж
+        System.out.println("Сумма ежемесячного платежа: " + (int) secondAnnuityPayment + " рублей");
 
-        double ThirdAnnuityPayment = service.calculate(ThirdCreditAmount, percent, ThirdMonths); //Аннуитетный платёж
-        System.out.println("Сумма ежемесячного платежа: " + (int) ThirdAnnuityPayment + " рублей");
+        double thirdAnnuityPayment = service.calculate(thirdCreditAmount, percent, thirdMonths); //Аннуитетный платёж
+        System.out.println("Сумма ежемесячного платежа: " + (int) thirdAnnuityPayment + " рублей");
     }
 }
